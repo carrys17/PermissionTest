@@ -1,24 +1,37 @@
+
 # PermissionTest
 
 关于android6.0的权限管理的问题处理。
 
 使用过程
+
 1、在AndroidManifest中添加权限，这里用到4个权限 
      
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    
+
 2、检查权限
+
    ContextCompat.checkSelfPermission
+   
+
 3、申请权限
+
    ActivityCompat.requestPermissions
+   
+
 4、处理权限申请回调
+
    onRequestPermissionsResult
    
 处理完之后你会发现代码有点冗余，所以可以自己封装起来，当然啦，晚上肯定有好多封装好的。这里就是用
 https://github.com/lovedise/PermissionGen
+
 使用起来也很简单
+
 1、加入依赖
 
      compile 'com.lovedise:permissiongen:0.0.6'
